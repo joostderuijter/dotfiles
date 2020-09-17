@@ -21,9 +21,19 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
+Plug 'mbbill/undotree'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 call plug#end()
 
 colorscheme gruvbox
 set background=dark
 
+let mapleader=" "
+
+"Saving stuff
+"In order for this to work, add 'stty -ixon' to .bashrc
+nnoremap <silent><C-s> :<c-u>update<cr>
+inoremap <silent><C-s> <c-o>:update<cr>
+
+nnoremap <silent><C-N>:set number! relativenumber!<cr>
