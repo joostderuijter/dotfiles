@@ -13,8 +13,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-
 set colorcolumn=80
+set relativenumber
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
@@ -22,8 +22,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'matze/vim-move'
 call plug#end()
 
 colorscheme gruvbox
@@ -36,4 +36,13 @@ let mapleader=" "
 nnoremap <silent><C-s> :<c-u>update<cr>
 inoremap <silent><C-s> <c-o>:update<cr>
 
-nnoremap <silent><C-N>:set number! relativenumber!<cr>
+"nnoremap <silent><C-N>:set number! relativenumber!<cr>
+
+let c='a'
+while c <= 'z'
+    exec "set <A-".c.">=\e".c
+    exec "imap \e".c." <A-".c.">"
+    let c = nr2char(1+char2nr(c))
+endw
+
+set timeout ttimeoutlen=50
