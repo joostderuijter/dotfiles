@@ -55,8 +55,21 @@ set timeout ttimeoutlen=50
 nnoremap <leader>r :source ~/.vimrc<CR> 
 
 " Fzf
-nmap <leader>f :Rg 
-nmap <leader>g :GFiles<CR>
-nmap <leader>p :Files<CR>
+nmap <leader>ps :Rg 
+nmap <leader>pf :Files<CR>
+nmap <C-p> :GFiles<CR>
 nmap <leader>b :Buffers<CR>
 
+" Edit vimrc
+nmap <leader>er :e ~/.vimrc<CR>
+
+" Reopen last buffer
+nnoremap <leader>z :e#<CR>
+
+" Window stuff
+nnoremap <silent><leader>h :wincmd h<CR>
+nnoremap <silent><leader>j :wincmd j<CR>
+nnoremap <silent><leader>k :wincmd k<CR>
+nnoremap <silent><leader>l :wincmd l<CR>
+nnoremap <silent><leader>u :UndotreeShow<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
