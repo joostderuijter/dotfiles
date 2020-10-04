@@ -16,6 +16,8 @@ set incsearch
 set relativenumber
 set cc=0
 set clipboard=unnamed
+set timeout ttimeoutlen=50
+set background=dark
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -34,16 +36,16 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme gruvbox
-set background=dark
 
 let mapleader=" "
 
+autocmd BufEnter * silent! lcd %:p:h
+"
 "Saving stuff
 ""In order for this to work, add 'stty -ixon' to .bashrc
 nnoremap <silent><C-s> :update<cr>
 inoremap <silent><C-s> <c-o>:update<cr>
 
-set timeout ttimeoutlen=50
 
 "Reload vimrc
 nnoremap <leader>r :source $vimrc<CR> 
