@@ -59,6 +59,7 @@ nmap <leader>gc :Gcommit<CR>
 nmap <leader>ga :Gwrite<CR>
 nmap <leader>ga. :Git add .<CR>
 nmap <leader>gs :Gstatus<CR>
+nmap <leader>gp :Git push<CR>
 
 " Edit vimrc
 nmap <leader>er :e $VIMRC<CR>
