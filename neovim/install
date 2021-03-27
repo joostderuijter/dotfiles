@@ -3,7 +3,7 @@ rm -rf ~/.config/nvim/
 
 mkdir -p ~/.config/nvim/plugin
 
-for f in `find -name "*.vim"`; do
+for f in `find -name "*.vim" -o -name "*.lua"`; do
     ln -s ~/dotfiles/neovim/$f ~/.config/nvim/$f
 done
 

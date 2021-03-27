@@ -8,7 +8,7 @@ Plug 'rakr/vim-one'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-compe'
 
 call plug#end()
 
