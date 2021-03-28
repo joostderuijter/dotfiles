@@ -11,3 +11,5 @@ set scrolloff=8
 set signcolumn=yes
 set colorcolumn=80
 set nowrap
+set clipboard+=unnamedplus
+set completeopt=menuone,noselect

@@ -12,6 +12,10 @@ Plug 'hrsh7th/nvim-compe'
 
 call plug#end()
 
+""" Lua files
+
+lua require('lspconfig').tsserver.setup{}
+lua require('compe-config')
 """ Custom mappings
 
 let mapleader=" "
@@ -21,3 +25,4 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+
